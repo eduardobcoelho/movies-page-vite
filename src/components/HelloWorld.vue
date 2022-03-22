@@ -1,16 +1,10 @@
 <template>
-  <h1>teste</h1>
+  <h1>{{ msg }}</h1>
 </template>
 
-<script>
-  import store from '../store/index'
-
-  export default {
-    name: 'HelloWorld',
-    setup() {
-      console.log('store', store)
-    },
-  }
+<script setup lang="ts">
+  import store from '../store'
+  defineProps<{ msg: string }>()
 </script>
 
 <style scoped>
