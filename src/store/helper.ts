@@ -20,7 +20,7 @@ const mocks: any = {
           age: 56,
         },
       ],
-      'poster?':
+      poster:
         'https://img.elo7.com.br/product/original/268A58D/big-poster-filme-pulp-fiction-lo001-tamanho-90x60-cm-presente-geek.jpg',
       director: {
         name: 'Quentin Tarantino',
@@ -47,7 +47,7 @@ const mocks: any = {
           age: 73,
         },
       ],
-      'poster?':
+      poster:
         'https://br.web.img2.acsta.net/medias/nmedia/18/90/07/53/20391069.jpg',
       director: {
         name: 'Quentin Tarantino',

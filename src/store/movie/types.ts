@@ -8,8 +8,8 @@ export interface IMovieState {
 export interface IMovie {
   name: string
   sinopse: string
-  year: Number
-  imdb: Number
+  year: number
+  imdb: number
   actors: IActor[]
   poster?: URL
   director: IDirector

@@ -10,6 +10,7 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
+      background: '#242424',
       blue: '#1fb6ff',
       purple: '#7e5bef',
       pink: '#ff49db',
@@ -19,6 +20,7 @@ module.exports = {
       'gray-dark': '#273444',
       gray: '#8492a6',
       'gray-light': '#d3dce6',
+      white: '#f6f6f6',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
