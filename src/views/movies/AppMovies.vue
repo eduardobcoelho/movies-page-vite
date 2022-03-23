@@ -1,5 +1,5 @@
 <template>
-  <div class="font-bold">{{ movies }}</div>
+  <div>{{ movies }}</div>
 </template>
 
 <script setup lang="ts">
