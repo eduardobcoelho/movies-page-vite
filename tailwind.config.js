@@ -1,7 +1,6 @@
 module.exports = {
   purge: [],
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       sm: '480px',
@@ -21,6 +20,7 @@ module.exports = {
       gray: '#8492a6',
       'gray-light': '#d3dce6',
       white: '#f6f6f6',
+      black: '#000000',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

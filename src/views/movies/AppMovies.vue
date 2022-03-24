@@ -4,7 +4,7 @@
       v-for="movie in movies"
       :key="movie.name"
       :name="movie.name"
-      :sinope="movie.sinopse"
+      :sinopse="movie.sinopse"
       :year="movie.year"
       :imdb="movie.imdb"
       :actors="movie.actors"
@@ -15,14 +15,11 @@
 </template>
 
 <script setup lang="ts">
-  // state management
   import { computed } from 'vue'
   import { useStore } from 'vuex'
-  // components
-  import AppMovie from '../../components/movies/AppMovie.vue'
-  // interfaces
   import { IMovie } from '../../store/movie/types'
-  // setup
+  import AppMovie from '../../components/movies/AppMovie.vue'
+
   const store = useStore()
   const getMovies = (): any => {
     store.dispatch('getMovies')
