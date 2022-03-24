@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AppMovies from '../views/movies/AppMovies.vue'
+import AppDirector from '../views/director/AppDirector.vue'
 
 export default createRouter({
   history: createWebHistory(),
@@ -8,6 +9,11 @@ export default createRouter({
       name: 'home',
       path: '/',
       component: AppMovies,
+    },
+    {
+      name: 'director',
+      path: '/director/:name',
+      component: AppDirector,
     },
   ],
 })

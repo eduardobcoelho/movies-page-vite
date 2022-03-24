@@ -14,17 +14,36 @@
   </div>
 
   <div class="text-white max-w-lg mt-4">
-    <span v-text="sinopse"></span>
+    <span class="text-md font-semibold text-white">Sinopse</span>
+    <div class="mt-1">
+      <span v-text="sinopse"> </span>
+    </div>
+  </div>
+
+  <div class="flex flex-col mt-4">
+    <span class="text-md font-semibold text-white"> Diretor </span>
+    <div @click="toDirectorDetails">
+      <span
+        v-text="director.name"
+        class="text-red font-medium cursor-pointer hover:underline mt-1 hover:font-bold"
+      ></span>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
   import { IDirector } from 'src/store/director/types'
-  defineProps<{
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter()
+  const props = defineProps<{
     name: string
     sinopse: string
     year: number
     imdb: number
     director: IDirector
   }>()
+  const toDirectorDetails = (): void => {
+    router.push(`/director/${props.director.name}`)
+  }
 </script>
