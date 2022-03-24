@@ -11,6 +11,7 @@
       :poster="movie.poster"
       :director="movie.director"
     ></app-movie>
+    <app-movies-scroll :movies="movies"></app-movies-scroll>
   </div>
 </template>
 
@@ -19,6 +20,7 @@
   import { useStore } from 'vuex'
   import { IMovie } from '../../store/movie/types'
   import AppMovie from '../../components/movies/AppMovie.vue'
+  import AppMoviesScroll from '../../components/movies/AppMoviesScroll.vue'
 
   const store = useStore()
   const getMovies = (): any => {

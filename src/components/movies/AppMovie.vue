@@ -1,5 +1,8 @@
 <template>
-  <div class="app-movie flex flex-col justify-center items-center">
+  <div
+    :id="`movie-${getMovieSectionId()}`"
+    class="app-movie flex flex-col justify-center items-center"
+  >
     <div class="app-movie__content w-full grid grid-cols-2">
       <div
         class="app-movie__poster flex flex-row justify-center items-center col-span-2 sm:col-span-1"
@@ -32,7 +35,7 @@
   import { IDirector } from 'src/store/director/types'
   import AppMovieDescription from './AppMovieDescription.vue'
 
-  defineProps<{
+  const { name } = defineProps<{
     name: string
     sinopse: string
     year: number
@@ -41,6 +44,7 @@
     poster?: URL
     director: IDirector
   }>()
+  const getMovieSectionId = (): string => name.replace(/[^a-zA-Z0-9]/g, '')
 </script>
 
 <style scoped>
