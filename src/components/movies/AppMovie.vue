@@ -44,7 +44,8 @@
     poster?: URL
     director: IDirector
   }>()
-  const getMovieSectionId = (): string => name.replace(/[^a-zA-Z0-9]/g, '')
+  const getMovieSectionId = (): string =>
+    name.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
 </script>
 
 <style scoped>

@@ -35,7 +35,7 @@
     }
   )
   const getMovieSectionId = (id: string): string =>
-    id.replace(/[^a-zA-Z0-9]/g, '')
+    id.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
 </script>
 
 <style scoped>
