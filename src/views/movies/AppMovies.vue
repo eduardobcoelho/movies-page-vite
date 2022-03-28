@@ -22,6 +22,7 @@
           :sinopse="movie.sinopse"
           :year="movie.year"
           :imdb="movie.imdb"
+          :imdbLink="movie.imdbLink"
           :director="movie.director"
         ></app-movie-description>
       </template>

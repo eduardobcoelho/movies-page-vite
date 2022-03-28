@@ -10,6 +10,7 @@ export interface IMovie {
   sinopse: string
   year: number
   imdb: number
+  imdbLink: URL
   actors: IActor[]
   poster?: URL
   director: IDirector

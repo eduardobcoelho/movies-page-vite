@@ -2,11 +2,13 @@
   <div class="flex items-center">
     <span v-text="name" class="text-6xl font-bold text-white"></span>
     <span class="text-yellow font-semibold ml-3"> {{ imdb }} / 10.0 </span>
-    <div
+    <a
+      :href="`${imdbLink}`"
+      target="_blank"
       class="bg-yellow rounded-xl border-2 border-black pt-1 pr-2 pb-1 pl-2 ml-3"
     >
       <span class="font-semibold">imdb</span>
-    </div>
+    </a>
   </div>
 
   <div class="mt-2">
@@ -41,6 +43,7 @@
     sinopse: string
     year: number
     imdb: number
+    imdbLink: URL
     director: IDirector
   }>()
   const toDirectorDetails = (): void => {

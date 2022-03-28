@@ -6,6 +6,7 @@ const mocks: any = {
         'Assassino que trabalha para a máfia se apaixona pela esposa de seu chefe quando é convidado a acompanhá-la.',
       year: 1994,
       imdb: 8.9,
+      imdbLink: 'https://www.imdb.com/title/tt0110912/',
       actors: [
         {
           name: 'John Travolta',
@@ -33,6 +34,7 @@ const mocks: any = {
         'No sul dos Estados Unidos, o ex-escravo Django faz uma aliança inesperada com o caçador de recompensas Schultz para caçar os criminosos mais procurados do país e resgatar sua esposa.',
       year: 2012,
       imdb: 8.5,
+      imdbLink: 'https://www.imdb.com/title/tt1853728/',
       actors: [
         {
           name: 'Jamie Foxx',
