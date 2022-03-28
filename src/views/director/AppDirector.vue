@@ -1,5 +1,9 @@
 <template>
   <div v-if="director" class="bg-background">
+    <div class="button-back-default-position">
+      <button-back></button-back>
+    </div>
+
     <base-structure :name="director.name">
       <template #image>
         <img
@@ -10,6 +14,13 @@
           class="transition-all cursor-pointer hover:rounded-lg"
         />
       </template>
+      <template #description>
+        <app-director-description
+          :name="director.name"
+          :age="director.age"
+          :birthday="director.birthday"
+        ></app-director-description>
+      </template>
     </base-structure>
   </div>
 </template>
@@ -19,6 +30,8 @@
   import { useStore } from 'vuex'
   import { useRoute } from 'vue-router'
   import { IDirector } from 'src/store/director/types'
+  import AppDirectorDescription from '../../components/director/AppDirectorDescription.vue'
+
   const store = useStore()
   const getDirectorByName = (): void => {
     store.dispatch('getDirectorByName', useRoute().params.name)

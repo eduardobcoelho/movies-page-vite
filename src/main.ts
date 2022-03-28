@@ -5,9 +5,11 @@ import store from './store'
 import './index.css'
 // globalComponents
 import BaseStructure from './components/BaseStructure.vue'
+import ButtonBack from './components/buttons/ButtonBack.vue'
 
 createApp(App)
   .use(router)
   .use(store)
   .component('base-structure', BaseStructure)
+  .component('button-back', ButtonBack)
   .mount('#app')

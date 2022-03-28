@@ -25,7 +25,8 @@ const mocks: any = {
         'https://img.elo7.com.br/product/original/268A58D/big-poster-filme-pulp-fiction-lo001-tamanho-90x60-cm-presente-geek.jpg',
       director: {
         name: 'Quentin Tarantino',
-        age: 58,
+        age: 59,
+        birthday: '27/03/1963',
       },
     },
     {
@@ -53,14 +54,16 @@ const mocks: any = {
         'https://br.web.img2.acsta.net/medias/nmedia/18/90/07/53/20391069.jpg',
       director: {
         name: 'Quentin Tarantino',
-        age: 58,
+        age: 59,
+        birthday: '27/03/1963',
       },
     },
   ],
   directors: [
     {
       name: 'Quentin Tarantino',
-      age: 58,
+      age: 59,
+      birthday: '27/03/1963',
       photo:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlTrJvdxqSMBYf90USQe0qXEaMhXdy35FJOpUlEZ5PGl4wIBI',
     },

@@ -5,5 +5,6 @@ export interface IDirectorState {
 export interface IDirector {
   name: string
   age: number
+  birthday: string
   photo?: URL
 }
