@@ -57,6 +57,13 @@ const mocks: any = {
       },
     },
   ],
+  directors: [
+    {
+      name: 'Quentin Tarantino',
+      age: 58,
+      photo: '',
+    },
+  ],
 }
 
 export default mocks
