@@ -1,16 +1,31 @@
 <template>
   <div class="bg-background">
-    <app-movie
+    <base-structure
       v-for="movie in movies"
+      isMovie
       :key="movie.name"
       :name="movie.name"
-      :sinopse="movie.sinopse"
-      :year="movie.year"
-      :imdb="movie.imdb"
-      :actors="movie.actors"
-      :poster="movie.poster"
-      :director="movie.director"
-    ></app-movie>
+    >
+      <template #image>
+        <img
+          :src="`${movie.poster}`"
+          :alt="`${movie.name} poster`"
+          :title="`${movie.name} poster`"
+          width="350"
+          class="transition-all cursor-pointer hover:rounded-lg"
+        />
+      </template>
+      <template #description>
+        <app-movie-description
+          :key="`${movie.name} description`"
+          :name="movie.name"
+          :sinopse="movie.sinopse"
+          :year="movie.year"
+          :imdb="movie.imdb"
+          :director="movie.director"
+        ></app-movie-description>
+      </template>
+    </base-structure>
     <app-movies-scroll :movies="movies"></app-movies-scroll>
   </div>
 </template>
@@ -19,7 +34,7 @@
   import { computed } from 'vue'
   import { useStore } from 'vuex'
   import { IMovie } from '../../store/movie/types'
-  import AppMovie from '../../components/movies/AppMovie.vue'
+  import AppMovieDescription from '../../components/movies/AppMovieDescription.vue'
   import AppMoviesScroll from '../../components/movies/AppMoviesScroll.vue'
 
   const store = useStore()
