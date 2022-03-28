@@ -1,6 +1,16 @@
 <template>
-  <div class="bg-background">
-    <!--<base-structure> </base-structure>-->
+  <div v-if="director" class="bg-background">
+    <base-structure :name="director.name">
+      <template #image>
+        <img
+          :src="`${director.photo}`"
+          :alt="`${director.name} image`"
+          :title="`${director.name} image`"
+          width="350"
+          class="transition-all cursor-pointer hover:rounded-lg"
+        />
+      </template>
+    </base-structure>
   </div>
 </template>
 
@@ -17,5 +27,4 @@
   const director: IDirector | null = <any>(
     computed(() => store.getters.currentDirector)
   )
-  console.log('director', director)
 </script>

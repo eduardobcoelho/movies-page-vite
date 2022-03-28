@@ -9,8 +9,9 @@ export default {
   ) {
     const director: IDirector = helper.directors.filter(
       (item: IDirector) =>
-        item.name.replaceAll('', ' ') === payload.replaceAll('', ' ')
-    )
+        item.name.toLowerCase().replaceAll('', ' ') ===
+        payload.toLowerCase().replaceAll('', ' ')
+    )[0]
     commit('setCurrentDirector', director)
   },
 }

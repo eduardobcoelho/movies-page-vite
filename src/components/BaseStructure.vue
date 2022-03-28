@@ -22,7 +22,7 @@
   import { toRefs } from 'vue'
 
   const props = defineProps<{ name: string; isMovie?: boolean }>()
-  const { name, isMovie } = toRefs(props)
+  const { name, isMovie = false } = toRefs(props)
 
   const getSectionId = (): string =>
     `${isMovie ? 'movie' : 'director'}-${name.value

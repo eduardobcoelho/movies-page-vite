@@ -61,7 +61,8 @@ const mocks: any = {
     {
       name: 'Quentin Tarantino',
       age: 58,
-      photo: '',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlTrJvdxqSMBYf90USQe0qXEaMhXdy35FJOpUlEZ5PGl4wIBI',
     },
   ],
 }
