@@ -11,8 +11,7 @@
           :src="`${movie.poster}`"
           :alt="`${movie.name} poster`"
           :title="`${movie.name} poster`"
-          width="350"
-          class="transition-all cursor-pointer hover:rounded-lg"
+          class="default-image-size transition-all cursor-pointer hover:rounded-lg"
         />
       </template>
       <template #description>

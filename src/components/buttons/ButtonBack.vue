@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="router.back()"
+    @click="router.push({ name: 'home' })"
     class="rounded-lg px-3 py-2"
     :class="`bg-${color}`"
   >

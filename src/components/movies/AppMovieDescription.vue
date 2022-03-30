@@ -1,17 +1,22 @@
 <template>
-  <div class="flex items-center">
-    <span v-text="name" class="text-6xl font-bold text-white"></span>
-    <span class="text-yellow font-semibold ml-3"> {{ imdb }} / 10.0 </span>
-    <a
-      :href="`${imdbLink}`"
-      target="_blank"
-      class="bg-yellow rounded-xl border-2 border-black pt-1 pr-2 pb-1 pl-2 ml-3"
-    >
-      <span class="font-semibold">imdb</span>
-    </a>
+  <div class="flex flex-col items-center md:flex-row">
+    <span
+      v-text="name"
+      class="text-xl font-bold text-white mt-4 lg:mt-0 md:text-4xl lg:text-6xl"
+    ></span>
+    <div class="flex items-center mt-4 lg:mt-0">
+      <span class="text-yellow font-semibold ml-3"> {{ imdb }} / 10.0 </span>
+      <a
+        :href="`${imdbLink}`"
+        target="_blank"
+        class="bg-yellow rounded-xl border-2 border-black pt-1 pr-2 pb-1 pl-2 ml-3"
+      >
+        <span class="font-semibold">imdb</span>
+      </a>
+    </div>
   </div>
 
-  <div class="mt-2">
+  <div class="mt-4 lg:mt-2">
     <span v-text="year" class="text-md font-semibold text-white"></span>
   </div>
 
@@ -23,8 +28,9 @@
   </div>
 
   <div class="flex flex-col mt-4">
-    <span class="text-md font-bold text-white"> Diretor </span>
+    <span class="text-md font-bold text-white hidden lg:inline"> Diretor </span>
     <div @click="toDirectorDetails" class="mt-1">
+      <span class="text-white font-bold inline lg:hidden mr-3">Diretor:</span>
       <span
         v-text="director.name"
         class="text-red font-medium cursor-pointer hover:underline hover:font-bold"

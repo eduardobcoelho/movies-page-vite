@@ -7,3 +7,19 @@
   top: 20px;
   left: 20px;
 }
+
+.default-image-size {
+  width: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .default-image-size {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .default-image-size {
+    width: 350px;
+  }
+}

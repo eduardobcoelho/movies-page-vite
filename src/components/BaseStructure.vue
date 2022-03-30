@@ -1,16 +1,16 @@
 <template>
   <div
     :id="getSectionId()"
-    class="app-structure flex flex-col justify-center items-center"
+    class="app-structure flex flex-col justify-center items-center p-4"
   >
     <div class="app-structure__content w-full grid grid-cols-2">
       <div
-        class="app-structure__image flex flex-row justify-center items-center col-span-2 sm:col-span-1"
+        class="app-structure__image flex flex-row justify-center items-center col-span-2 lg:col-span-1"
       >
         <slot name="image"></slot>
       </div>
       <div
-        class="app-structure__description flex flex-col justify-center items-start"
+        class="app-structure__description col-span-2 flex flex-col items-center lg:col-span-1 lg:flex lg:flex-col lg:justify-center lg:items-start"
       >
         <slot name="description"></slot>
       </div>
