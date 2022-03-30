@@ -10,8 +10,7 @@
           :src="`${director.photo}`"
           :alt="`${director.name} image`"
           :title="`${director.name} image`"
-          width="350"
-          class="transition-all cursor-pointer hover:rounded-lg"
+          class="default-image-size transition-all cursor-pointer hover:rounded-lg"
         />
       </template>
       <template #description>
