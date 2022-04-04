@@ -9,9 +9,9 @@ export default {
     movieName: string
   ) {
     try {
-      const actors: IActor[] = helper.movies.filter(
-        (item: IMovie) => item.name === movieName
-      )[0].actors
+      const actors: IActor[] = helper.movies.filter((item: IMovie) => {
+        return item.name === movieName
+      })[0].actors
       commit('setCurrentActors', actors)
       return Promise.resolve(actors)
     } catch (err) {

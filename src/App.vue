@@ -6,6 +6,8 @@
 
 <style>
   html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     scroll-behavior: smooth;
   }
 
