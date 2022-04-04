@@ -1,33 +1,31 @@
 <template>
-  <div class="bg-background">
-    <base-structure
-      v-for="movie in movies"
-      isMovie
-      :key="movie.name"
-      :name="movie.name"
-    >
-      <template #image>
-        <img
-          :src="`${movie.poster}`"
-          :alt="`${movie.name} poster`"
-          :title="`${movie.name} poster`"
-          class="default-image-size transition-all cursor-pointer hover:rounded-lg"
-        />
-      </template>
-      <template #description>
-        <app-movie-description
-          :key="`${movie.name} description`"
-          :name="movie.name"
-          :sinopse="movie.sinopse"
-          :year="movie.year"
-          :imdb="movie.imdb"
-          :imdbLink="movie.imdbLink"
-          :director="movie.director"
-        ></app-movie-description>
-      </template>
-    </base-structure>
-    <app-movies-scroll :movies="movies"></app-movies-scroll>
-  </div>
+  <base-structure
+    v-for="movie in movies"
+    isMovie
+    :key="movie.name"
+    :name="movie.name"
+  >
+    <template #image>
+      <img
+        :src="`${movie.poster}`"
+        :alt="`${movie.name} poster`"
+        :title="`${movie.name} poster`"
+        class="default-image-size transition-all cursor-pointer hover:rounded-lg"
+      />
+    </template>
+    <template #description>
+      <app-movie-description
+        :key="`${movie.name} description`"
+        :name="movie.name"
+        :sinopse="movie.sinopse"
+        :year="movie.year"
+        :imdb="movie.imdb"
+        :imdbLink="movie.imdbLink"
+        :director="movie.director"
+      ></app-movie-description>
+    </template>
+  </base-structure>
+  <app-movies-scroll :movies="movies"></app-movies-scroll>
 </template>
 
 <script setup lang="ts">

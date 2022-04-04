@@ -1,5 +1,5 @@
 <template>
-  <div v-if="director" class="bg-background">
+  <div v-if="director">
     <div class="button-back-default-position">
       <button-back></button-back>
     </div>

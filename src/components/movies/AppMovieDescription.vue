@@ -37,6 +37,16 @@
       ></span>
     </div>
   </div>
+
+  <div class="w-full flex justify-center mt-4">
+    <button
+      @click="$router.push(`/movie/actors/${name}`)"
+      class="rounded-lg px-3 py-2"
+      :class="`bg-red`"
+    >
+      <span class="text-white font-semibold">Atores</span>
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
