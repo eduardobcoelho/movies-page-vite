@@ -4,6 +4,19 @@
   </div>
 </template>
 
+<script setup lang="ts">
+  const appContent = document.getElementById('app')
+  const MouseWheelHandler = (e: any) => {
+    e.preventDefault()
+    e.stopPropagation()
+    return false
+  }
+  if (appContent) {
+    appContent.addEventListener('mousewheel', MouseWheelHandler, false)
+    appContent.addEventListener('DOMMouseScroll', MouseWheelHandler, false)
+  }
+</script>
+
 <style>
   html {
     -webkit-box-sizing: border-box;
