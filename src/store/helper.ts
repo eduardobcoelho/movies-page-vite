@@ -10,14 +10,23 @@ const mocks: any = {
       actors: [
         {
           name: 'John Travolta',
+          birthday: '18/02/1954',
+          photo:
+            'https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/9/5/b/c/95bc924faa1c01f67178a89f6ca4e096.jpg',
           age: 68,
         },
         {
           name: 'Samuel L. Jackson',
+          birthday: '21/12/1948',
+          photo:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Samuel_L._Jackson_2019_by_Glenn_Francis.jpg/1200px-Samuel_L._Jackson_2019_by_Glenn_Francis.jpg',
           age: 73,
         },
         {
           name: 'Maria de Medeiros',
+          birthday: '19/08/1965',
+          photo:
+            'http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRe22SUQs7ChJ5Ubn-RdMhJyIUvr_3Cn7oEv4XMRoTO6_TnfTfkLLhvq1kS9ZVb',
           age: 56,
         },
       ],
@@ -39,14 +48,23 @@ const mocks: any = {
       actors: [
         {
           name: 'Jamie Foxx',
+          birthday: '13/12/1967',
+          photo:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf6FGrcpWKJc-y8maa2E5u33sWL4KQXBV2FtNmaV9jfih5GJ0e',
           age: 54,
         },
         {
           name: 'Leonardo DiCaprio',
+          birthday: '11/11/1974',
+          photo:
+            'https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/92/61/22/20208787.jpg',
           age: 47,
         },
         {
           name: 'Samuel L. Jackson',
+          birthday: '21/12/1948',
+          photo:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Samuel_L._Jackson_2019_by_Glenn_Francis.jpg/1200px-Samuel_L._Jackson_2019_by_Glenn_Francis.jpg',
           age: 73,
         },
       ],

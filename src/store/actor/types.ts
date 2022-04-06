@@ -5,5 +5,6 @@ export interface IStateActor {
 export interface IActor {
   name: string
   age: number
-  photo?: URL
+  birthday: string
+  photo: URL
 }

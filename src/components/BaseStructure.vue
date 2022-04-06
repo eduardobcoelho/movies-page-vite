@@ -34,8 +34,6 @@
   .app-structure {
     width: 100%;
     min-height: 100vh;
-    background: transparent;
-    box-shadow: 0 0 200px #131313 inset;
   }
   .app-structure__content {
     max-width: 1366px;

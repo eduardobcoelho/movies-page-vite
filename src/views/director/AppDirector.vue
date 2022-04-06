@@ -14,11 +14,11 @@
         />
       </template>
       <template #description>
-        <app-director-description
+        <general-description
           :name="director.name"
           :age="director.age"
           :birthday="director.birthday"
-        ></app-director-description>
+        ></general-description>
       </template>
     </base-structure>
   </div>
@@ -29,7 +29,6 @@
   import { useStore } from 'vuex'
   import { useRoute } from 'vue-router'
   import { IDirector } from 'src/store/director/types'
-  import AppDirectorDescription from '../../components/director/AppDirectorDescription.vue'
 
   const store = useStore()
   const getDirectorByName = (): void => {

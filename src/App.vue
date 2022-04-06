@@ -27,5 +27,6 @@
   #app {
     width: 100%;
     min-height: 100vh;
+    box-shadow: 0 0 200px #131313 inset;
   }
 </style>
