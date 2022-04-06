@@ -31,8 +31,8 @@
 <script setup lang="ts">
   import { computed } from 'vue'
   import { useStore } from 'vuex'
-  import { IMovie } from '../../store/movie/types'
-  import AppMovieDescription from '../../components/movies/AppMovieDescription.vue'
+  import { IMovie } from 'src/store/movie/types'
+  import AppMovieDescription from '/src/components/movies/AppMovieDescription.vue'
 
   const store = useStore()
   const getMovies = (): any => {

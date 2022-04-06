@@ -8,7 +8,7 @@
       <span class="text-yellow font-semibold"> 2 </span>
       <span>
         <img
-          src="../assets/icon-oscar.png"
+          src="/src/assets/icon-oscar.png"
           title="Oscar icon"
           alt="Oscar icon"
           class="oscar-icon"

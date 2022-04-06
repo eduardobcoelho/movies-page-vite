@@ -1,5 +1,5 @@
 <template>
-  <div class="items-scroll">
+  <div class="app-scroll">
     <div
       v-for="(item, i) in data"
       :key="`${i}-${getSectionId(item.name)}`"
@@ -8,7 +8,7 @@
       <a :href="`#${entity}-${getSectionId(item.name)}`">
         <div
           :class="[
-            'items-scroll__ball',
+            'app-scroll__ball',
             route.hash.includes(getSectionId(item.name))
               ? 'bg-white'
               : 'border-2 border-white',
@@ -39,13 +39,13 @@
 </script>
 
 <style scoped>
-  .items-scroll {
+  .app-scroll {
     position: fixed;
     top: 50%;
     right: 20px;
   }
 
-  .items-scroll__ball {
+  .app-scroll__ball {
     width: 12px;
     height: 12px;
     border-radius: 50%;
