@@ -4,7 +4,7 @@
       <button-back></button-back>
     </div>
 
-    <base-structure :name="director.name">
+    <base-structure :name="director.name" entity="director">
       <template #image>
         <img
           :src="`${director.photo}`"

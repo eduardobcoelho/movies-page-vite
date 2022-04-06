@@ -1,7 +1,7 @@
 <template>
   <base-structure
     v-for="movie in movies"
-    isMovie
+    entity="movie"
     :key="movie.name"
     :name="movie.name"
   >

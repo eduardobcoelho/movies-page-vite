@@ -3,7 +3,7 @@
     <button-back></button-back>
   </div>
 
-  <base-structure :name="name">
+  <base-structure :name="name" entity="actor">
     <template #image>
       <img
         :src="`${photo}`"

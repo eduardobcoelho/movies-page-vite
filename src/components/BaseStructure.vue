@@ -21,13 +21,11 @@
 <script setup lang="ts">
   import { toRefs } from 'vue'
 
-  const props = defineProps<{ name: string; isMovie?: boolean }>()
-  const { name, isMovie = false } = toRefs(props)
+  const props = defineProps<{ name: string; entity: string }>()
+  const { name, entity } = toRefs(props)
 
   const getSectionId = (): string =>
-    `${isMovie ? 'movie' : 'director'}-${name.value
-      .toLowerCase()
-      .replace(/[^a-zA-Z0-9]/g, '')}`
+    `${entity}-${name.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')}`
 </script>
 
 <style scoped>
