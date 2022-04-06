@@ -26,13 +26,14 @@
 
 <script lang="ts" setup>
   import { ref, computed } from 'vue'
-  import { useRoute } from 'vue-router'
+  import { useRoute, useRouter } from 'vue-router'
   import { useStore } from 'vuex'
   import { IActor } from 'src/store/actor/types'
   import AppActor from '/src/components/actor/AppActor.vue'
 
   const store = useStore()
   const route = useRoute()
+  const router = useRouter()
 
   const movieName = ref(route.params.movie_name)
   let actors: IActor[] = <any>computed(() => store.getters.currentActors)
@@ -45,8 +46,10 @@
     aTag.click()
   }
   const toTop = () => {
+    router.push(`/movie/actors/${movieName.value}`)
     window.scrollTo({ top: 0 })
   }
+  toTop()
   getActors()
 </script>
 

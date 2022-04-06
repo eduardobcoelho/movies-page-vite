@@ -26,18 +26,33 @@
     </template>
   </base-structure>
   <app-scroll entity="movie" :data="movies"></app-scroll>
+  <div class="button-redirect-bottom-default-position">
+    <button-redirect direction="top" @click="toTop"></button-redirect>
+  </div>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue'
+  import { useRouter } from 'vue-router'
   import { useStore } from 'vuex'
   import { IMovie } from 'src/store/movie/types'
   import AppMovieDescription from '/src/components/movies/AppMovieDescription.vue'
 
   const store = useStore()
+  const router = useRouter()
+  const movies: IMovie[] = <any>computed(() => store.getters.movies)
   const getMovies = (): any => {
     store.dispatch('getMovies')
   }
+  const toTop = () => {
+    let movies = store.getters.movies
+    router.push(
+      movies.length
+        ? `/#movie-${movies[0].name.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')}`
+        : '/'
+    )
+    window.scrollTo({ top: 0 })
+  }
   getMovies()
-  const movies: IMovie[] = <any>computed(() => store.getters.movies)
+  toTop()
 </script>
