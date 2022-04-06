@@ -25,7 +25,7 @@
       ></app-movie-description>
     </template>
   </base-structure>
-  <app-movies-scroll :movies="movies"></app-movies-scroll>
+  <app-scroll entity="movie" :data="movies"></app-scroll>
 </template>
 
 <script setup lang="ts">
@@ -33,7 +33,6 @@
   import { useStore } from 'vuex'
   import { IMovie } from '../../store/movie/types'
   import AppMovieDescription from '../../components/movies/AppMovieDescription.vue'
-  import AppMoviesScroll from '../../components/movies/AppMoviesScroll.vue'
 
   const store = useStore()
   const getMovies = (): any => {

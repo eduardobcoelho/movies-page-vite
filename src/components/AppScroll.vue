@@ -1,15 +1,15 @@
 <template>
-  <div class="movies-scroll">
+  <div class="items-scroll">
     <div
-      v-for="(movie, i) in movies"
-      :key="`${i}-${getMovieSectionId(movie.name)}`"
+      v-for="(item, i) in data"
+      :key="`${i}-${getSectionId(item.name)}`"
       class="mt-3"
     >
-      <a :href="`#movie-${getMovieSectionId(movie.name)}`">
+      <a :href="`#${entity}-${getSectionId(item.name)}`">
         <div
           :class="[
-            'movies-scroll__ball',
-            route.hash.includes(getMovieSectionId(movie.name))
+            'items-scroll__ball',
+            route.hash.includes(getSectionId(item.name))
               ? 'bg-white'
               : 'border-2 border-white',
           ]"
@@ -21,31 +21,31 @@
 
 <script setup lang="ts">
   import { useRoute } from 'vue-router'
-  import { IMovie } from '../../store/movie/types'
   import { reactive } from 'vue'
 
   const route = reactive(useRoute())
 
   withDefaults(
     defineProps<{
-      movies: IMovie[]
+      data: any[]
+      entity: string
     }>(),
     {
-      movies: () => [],
+      data: () => [],
     }
   )
-  const getMovieSectionId = (id: string): string =>
-    id.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
+  const getSectionId = (name: string): string =>
+    name.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
 </script>
 
 <style scoped>
-  .movies-scroll {
+  .items-scroll {
     position: fixed;
     top: 50%;
     right: 20px;
   }
 
-  .movies-scroll__ball {
+  .items-scroll__ball {
     width: 12px;
     height: 12px;
     border-radius: 50%;
