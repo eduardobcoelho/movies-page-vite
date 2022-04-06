@@ -25,7 +25,7 @@
   const { name, entity } = toRefs(props)
 
   const getSectionId = (): string =>
-    `${entity}-${name.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')}`
+    `${entity.value}-${name.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')}`
 </script>
 
 <style scoped>
