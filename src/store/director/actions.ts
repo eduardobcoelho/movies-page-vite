@@ -7,11 +7,16 @@ export default {
     { commit }: ActionContext<IDirectorState, any>,
     payload: string
   ) {
-    const director: IDirector = helper.directors.filter(
-      (item: IDirector) =>
-        item.name.toLowerCase().replaceAll('', ' ') ===
-        payload.toLowerCase().replaceAll('', ' ')
-    )[0]
-    commit('setCurrentDirector', director)
+    try {
+      const director: IDirector = helper.directors.filter(
+        (item: IDirector) =>
+          item.name.toLowerCase().replaceAll('', ' ') ===
+          payload.toLowerCase().replaceAll('', ' ')
+      )[0]
+      commit('setCurrentDirector', director)
+      return Promise.resolve(director)
+    } catch (error) {
+      return Promise.reject(error)
+    }
   },
 }
