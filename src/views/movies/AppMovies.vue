@@ -35,7 +35,7 @@
   import { computed } from 'vue'
   import { useRouter } from 'vue-router'
   import { useStore } from 'vuex'
-  import { IMovie } from 'src/store/movie/types'
+  import { IMovie } from '../../store/movie/types'
   import AppMovieDescription from '/src/components/movies/AppMovieDescription.vue'
 
   const store = useStore()

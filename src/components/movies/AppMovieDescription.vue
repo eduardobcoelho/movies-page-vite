@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-  import { IDirector } from 'src/store/director/types'
+  import { IDirector } from '../../store/director/types'
   import { useRouter } from 'vue-router'
 
   const router = useRouter()

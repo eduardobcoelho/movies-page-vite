@@ -28,7 +28,7 @@
   import { computed } from 'vue'
   import { useStore } from 'vuex'
   import { useRoute } from 'vue-router'
-  import { IDirector } from 'src/store/director/types'
+  import { IDirector } from '../../store/director/types'
 
   const store = useStore()
   const getDirectorByName = (): void => {
