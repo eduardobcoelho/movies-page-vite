@@ -152,6 +152,43 @@ const mocks: any = {
         birthday: '27/03/1963',
       },
     },
+    {
+      name: 'Cães de Aluguel',
+      sinopse: 'Criminoso reúne seis bandidos para grande roubo de diamantes.',
+      year: 1993,
+      imdb: 8.3,
+      imdbLink: 'https://www.imdb.com/title/tt0105236/',
+      actors: [
+        {
+          name: 'Quentin Tarantino',
+          age: 59,
+          photo:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlTrJvdxqSMBYf90USQe0qXEaMhXdy35FJOpUlEZ5PGl4wIBI',
+          birthday: '27/03/1963',
+        },
+        {
+          name: 'Tim Roth',
+          birthday: '14/05/1961',
+          photo:
+            'http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSh4JlBCQR0GBv8QAgpQ8GjVjEYcU2QMDFGaR2uOkLuhi792XYuRTzN0wmo_PiY',
+          age: 60,
+        },
+        {
+          name: 'Steve Buscemi',
+          birthday: '13/12/1957',
+          photo:
+            'http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQmKopVNGoxsTJ1DRo4jO1MvmuzprjylNr309oeqLtF44eVwK5Se5C0gCRpeolR',
+          age: 64,
+        },
+      ],
+      poster:
+        'https://br.web.img3.acsta.net/pictures/15/03/19/17/47/301476.jpg',
+      director: {
+        name: 'Quentin Tarantino',
+        age: 59,
+        birthday: '27/03/1963',
+      },
+    },
   ],
   directors: [
     {
