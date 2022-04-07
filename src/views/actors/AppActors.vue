@@ -1,6 +1,6 @@
 <template>
   <div class="mh-100vh flex flex-col justify-center items-center">
-    <span class="font-bold text-red text-3xl md:text-6xl">{{ movieName }}</span>
+    <span class="font-bold text-red text-3xl md:text-5xl">{{ movieName }}</span>
     <span class="font-bold text-white text-xl mt-2 md:text-3xl">Atores</span>
     <span v-if="actors.length" class="mt-4">
       <button-redirect @click="downToFirst"></button-redirect>

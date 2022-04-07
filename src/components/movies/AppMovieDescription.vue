@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center md:flex-row">
     <span
       v-text="name"
-      class="text-xl font-bold text-white mt-4 lg:mt-0 md:text-4xl lg:text-6xl"
+      class="text-xl font-bold text-white mt-4 lg:mt-0 md:text-4xl lg:text-5xl"
     ></span>
     <div class="flex items-center mt-4 lg:mt-0">
       <span class="text-yellow font-semibold ml-3"> {{ imdb }} / 10.0 </span>
