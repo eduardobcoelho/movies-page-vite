@@ -4,17 +4,6 @@
       v-text="name"
       class="text-xl font-bold text-white mt-4 lg:mt-0 md:text-4xl lg:text-5xl"
     ></span>
-    <div class="ml-3 mt-4 lg:mt-0 flex items-center">
-      <span class="text-yellow font-semibold"> 2 </span>
-      <span>
-        <img
-          src="/src/assets/icon-oscar.png"
-          title="Oscar icon"
-          alt="Oscar icon"
-          class="oscar-icon"
-        />
-      </span>
-    </div>
   </div>
 
   <div class="mt-2">
