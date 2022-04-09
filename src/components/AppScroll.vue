@@ -1,20 +1,22 @@
 <template>
-  <div class="app-scroll">
-    <div
-      v-for="(item, i) in data"
-      :key="`${i}-${getSectionId(item.name)}`"
-      class="mt-3"
-    >
-      <a :href="`#${entity}-${getSectionId(item.name)}`">
-        <div
-          :class="[
-            'app-scroll__ball',
-            route.hash.includes(getSectionId(item.name))
-              ? 'bg-white'
-              : 'border-2 border-white',
-          ]"
-        ></div>
-      </a>
+  <div class="app-scroll flex justify-end items-center">
+    <div class="flex flex-col justify-center items-center mr-3 md:mr-5">
+      <div
+        v-for="(item, i) in data"
+        :key="`${i}-${getSectionId(item.name)}`"
+        class="mt-3"
+      >
+        <a :href="`#${entity}-${getSectionId(item.name)}`">
+          <div
+            :class="[
+              'app-scroll__ball',
+              route.hash.includes(getSectionId(item.name))
+                ? 'bg-white'
+                : 'border-2 border-white',
+            ]"
+          ></div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -40,9 +42,11 @@
 
 <style scoped>
   .app-scroll {
+    width: 100%;
+    height: 100vh;
     position: fixed;
-    top: 50%;
-    right: 20px;
+    top: 0px;
+    left: 0px;
   }
 
   .app-scroll__ball {
